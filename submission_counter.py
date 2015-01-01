@@ -1,4 +1,4 @@
-# Counts the number of submissions with 100 score in a codechef problem
+# Counts the number of distinct users with 100 score in a codechef problem
 #requires python 2.x and the library BeautifulSoup
 
 
