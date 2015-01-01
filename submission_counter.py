@@ -1,3 +1,7 @@
+# Counts the number of submissions with 100 score in a codechef problem
+#requires python 2.x and the library BeautifulSoup
+
+
 import sys
 import urllib
 from bs4 import BeautifulSoup
@@ -17,11 +21,6 @@ url += const_url_suffix
 page = urllib.urlopen(url)
 page = page.read()
 soup = BeautifulSoup(page)
-#soup.prettify()
-#print soup
-#pageinfo = soup.find('div',class_='pageinfo').string
-#totalpages = int(pageinfo[5:])
-#print totalpages
 count = 0
 pageno = 0
 found = []
@@ -73,21 +72,3 @@ while proceed:
 			#print nextbutton['href']
 		
 print "Number of distinct users with 100 points : ",count
-# y = "http://www.codechef.com/"
-# y += x
-# print (y)
-# page = urllib2.urlopen(y)
-# #print (page.geturl().strip(y))
-# if page.geturl() != y:
-#     print ("Problem does not exist")
-#     sys.exit(0)
-# page = page.read()
-# soup = BeautifulSoup(page)
-# soup.prettify()
-# #print (soup)
-# mainblock = soup.find('div', class_ = "node clear-block")
-# #print (mainblock)
-# #print (mainblock)
-# for paras in mainblock.find('div',class_="content").find_all(['p','h3','pre']):
-#    for yo in paras.contents:
-#        print (yo)
